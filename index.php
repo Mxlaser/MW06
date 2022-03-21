@@ -21,7 +21,7 @@
         <a href="#">Présentation</a>
       </div>
       <div>
-        <a href="#">Suivi</a>
+        <a href="suivi.php?suivi">Suivi</a>
       </div>
       <?php
         if(isset($_COOKIE['pseudo']))

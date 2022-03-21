@@ -32,7 +32,7 @@
         <span id="mdp_special" class="rouge">1 Caractère spécial</span>.
       </p>
 
-      <label for="mdp2">Ressaisir le mot de passe :</label>
+      <label for="mdp2">Resaisir le mot de passe :</label>
       <input type="password" id="mdp2" name="mot_De_Passe_Utilisateur2" required>
       <input type="submit" id="valider" name="inscription" value="Valider">
     </form>
