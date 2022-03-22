@@ -1,3 +1,53 @@
-html{
-  
+body[data-theme="light"]{
+  --hf-bg-color : #2874a6;
+  --hf-text-color : white;
+  --n-bg-color : #2874a6;
+  --n-text-color : white;
+  --sa-title-color : #2874a6;
+  --sa-text-color : black;
+  --sa-bg-color : white;
+}
+
+body[data-theme="dark"]{
+  --hf-bg-color : #262626;
+  --hf-text-color : white;
+  --n-bg-color : #262626;
+  --n-text-color : white;
+  --sa-title-color : white;
+  --sa-text-color : white;
+  --sa-bg-color : #333333;
+}
+
+body{
+  background-color: var(--sa-bg-color)
+}
+
+div.statistique{
+  display: inline-grid;
+  padding: 12px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: var(--n-bg-color);
+  color: white;
+  font-size: 2em;
+  font-family: monospace;
+  width: 25%;
+}
+
+p{
+  margin: 0;
+  display: inline-grid;
+}
+
+img{
+  width:50%;
+  padding: 10px;
+}
+
+p.statistique_icone{
+  width:50%;
+}
+
+p.statistique_valeur{
+
 }

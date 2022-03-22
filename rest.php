@@ -165,16 +165,42 @@
   //---Sessions
   if(isset($_GET['suivi']))
   {
-    $req="select count(iddrone) as nb from drone";
-    $reqpreparer=$mydb->prepare($req);
-    $tableauDeDonnees=array();
+    //1ere requete
+    $req = "select count(iddrone) as nb from drone";
+    $reqpreparer = $mydb->prepare($req);
+    $tableauDeDonnees = array();
     $reqpreparer->execute($tableauDeDonnees);
 
-    $reponse=$reqpreparer->fetchAll(PDO::FETCH_ASSOC);
+    $reponse = $reqpreparer->fetchAll(PDO::FETCH_ASSOC);
 
-    $_SESSION['nbdrone']=$reponse[0]["nb"];
+    $_SESSION['nbdrone'] = $reponse[0]["nb"];
 
     $reqpreparer->closeCursor();
+    //---
+    //---2e requete
+    $req = "select count(idvol) as nb1 from vol";
+    $reqpreparer = $mydb->prepare($req);
+    $tableauDeDonnees = array();
+    $reqpreparer->execute($tableauDeDonnees);
+
+    $reponse = $reqpreparer->fetchAll(PDO::FETCH_ASSOC);
+
+    $_SESSION['nbvol'] = $reponse[0]["nb1"];
+
+    $reqpreparer->closeCursor();
+    //---
+    //---3e requete
+    $req = "select count(idutilisateur) as nb3 from utilisateur";
+    $reqpreparer = $mydb->prepare($req);
+    $tableauDeDonnees = array();
+    $reqpreparer->execute($tableauDeDonnees);
+
+    $reponse = $reqpreparer->fetchAll(PDO::FETCH_ASSOC);
+
+    $_SESSION['nbutilisateur'] = $reponse[0]["nb3"];
+
+    $reqpreparer->closeCursor();
+    //---
 
     header('Location:suivi.php?suivi');
   }
