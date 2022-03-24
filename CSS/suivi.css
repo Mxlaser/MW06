@@ -22,32 +22,48 @@ body{
   background-color: var(--sa-bg-color)
 }
 
-div.statistique{
-  display: inline-grid;
-  padding: 12px 20px;
+img{
+  width: 95%;
+  height: 95%;
+}
+
+a:link, a:visited, a:active{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  border-bottom: 2px solid black;
+  transition-duration: 0.3s;
+}
+
+.statistique{
+  display: inline-block;
   border: 1px solid white;
   border-radius: 10px;
   background-color: var(--n-bg-color);
-  color: white;
-  font-size: 2em;
+  font-size: 3em;
   font-family: monospace;
-  width: 25%;
+  width: 19%;
+  height: 20%;
+  margin: 0.1%;
 }
 
-p{
+.statistique_icone{
   margin: 0;
-  display: inline-grid;
+  padding: 1%;
+  width: 49%;
+  height: 100%;
+  float: left;
 }
 
-img{
-  width:50%;
-  padding: 10px;
-}
 
-p.statistique_icone{
-  width:50%;
-}
-
-p.statistique_valeur{
-
+.statistique_valeur{
+  margin: 0;
+  width: 49%;
+  height: 100%;
+  line-height: 150px;
+  float: right;
+  text-align: center;
+  font-weight: bold;
 }

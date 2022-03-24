@@ -15,14 +15,16 @@
         if(isset($_SESSION['nbdrone']))
         {
           $nbdrone = $_SESSION['nbdrone'];
-          echo "<div class='statistique'><a href='suivi.php?listeDrones'>";
-          echo "<p class='statistique_icone'><img src='Images/Icones/drone.svg'></p>";
-          echo "<p class='statistique_valeur'>$nbdrone</p></a></div>";
+          //Methode 1
+          echo '<div class="statistique"><a href="suivi.php?listeDrones">';
+          echo '<p class="statistique_icone"><img src="Images/Icones/drone.svg"></p>';
+          echo '<p class="statistique_valeur">'.$nbdrone.'</p></a></div>';
           unset($_SESSION['nbdrone']);
         }
         if(isset($_SESSION['nbvol']))
         {
           $nbvol = $_SESSION['nbvol'];
+          //Methode 2
           echo "<div class='statistique'><a href='suivi.php?listeVols'>";
           echo "<p class='statistique_icone'><img src='Images/Icones/fly.svg'></p>";
           echo "<p class='statistique_valeur'>$nbvol</p></a></div>";
